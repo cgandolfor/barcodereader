@@ -1,18 +1,6 @@
 <h1 style="text-align: center;">QR Code Reader using JavaScript and HTML5</h1>
 <hr>
 <script src="html5-qrcode.min.js"></script>
-<script>
-  function submitValue() {
-    // Get the value entered by the user
-    var input = document.getElementById('result');
-    var value = input.value;
-    console.log(value);
-    // Store the value in localStorage
-    localStorage.setItem('myValue', value);   
-    // Redirect to the second page
-    window.location.href = 'http://parque.000.pe/page1.html';
-  }
-</script>
 <style>
   .result{
     background-color: green;
@@ -28,14 +16,16 @@
     <div style="width:500px;" id="reader"></div>
   </div>
   <div class="col" style="padding:30px;">
-    <button onclick="submitValue()">Submit</button>
     <h4>SCAN RESULT</h4>
     <div id="result">Result Here</div>
   </div>
 </div>
 <script type="text/javascript">
 function onScanSuccess(qrCodeMessage) {
-    document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
+    var input = document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
+    var value = input.value;
+    localStorage.setItem('myValue', value);
+    window.location.href = 'http://parque.000.pe/page1.html';
 }
 function onScanError(errorMessage) {
   //handle scan error
