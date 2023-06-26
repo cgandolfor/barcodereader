@@ -23,9 +23,6 @@
 <script type="text/javascript">
 function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
-    localStorage.setItem('myValue', qrCodeMessage);
-    document.write(document.getElementById('result').value);
-    //window.location.href = 'http://parque.000.pe/page1.html';
 }
 function onScanError(errorMessage) {
   //handle scan error
@@ -33,4 +30,6 @@ function onScanError(errorMessage) {
 var html5QrcodeScanner = new Html5QrcodeScanner(
     "reader", { fps: 10, qrbox: 250 });
 html5QrcodeScanner.render(onScanSuccess, onScanError);
+localStorage.setItem('myValue', qrCodeMessage);
+window.location.href = 'http://parque.000.pe/page1.html';
 </script>
