@@ -30,18 +30,4 @@ function onScanError(errorMessage) {
 var html5QrcodeScanner = new Html5QrcodeScanner(
     "reader", { fps: 10, qrbox: 250 });
 html5QrcodeScanner.render(onScanSuccess, onScanError);
-
-    <script>
-      function submitValue() {
-        // Get the value entered by the user
-        var input = document.getElementById('result');
-        var value = input.value;
-        
-        // Store the value in localStorage
-        localStorage.setItem('myValue', value);
-        
-        // Redirect to the second page
-        window.location.href = 'http://parque.000.pe/page2.html';
-      }
-    </script>
 </script>
