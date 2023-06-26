@@ -22,9 +22,8 @@
 </div>
 <script type="text/javascript">
 function onScanSuccess(qrCodeMessage) {
-    var input = document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
-    var value = input.value;
-    localStorage.setItem('myValue', value);
+    document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
+    localStorage.setItem('myValue', qrCodeMessage);
     window.location.href = 'http://parque.000.pe/page1.html';
 }
 function onScanError(errorMessage) {
