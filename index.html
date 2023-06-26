@@ -26,9 +26,9 @@ function onScanSuccess(qrCodeMessage) {
     var input = document.getElementById('result');
     var value = input.value;
     localStorage.setItem('myValue', value);
-    document.write(qrCodeMessage);
-    document.write(input);
-    document.write(value);
+    document.writeln(qrCodeMessage);
+    document.writeln(input);
+    document.writeln(value);
     //window.location.href = 'http://parque.000.pe/page1.html';
 }
 function onScanError(errorMessage) {
