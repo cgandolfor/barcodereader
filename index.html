@@ -17,10 +17,9 @@
   </div>
   <div class="col" style="padding:30px;">
     <h4>SCAN RESULT</h4>
-    <div id="result">Result Here</div>
+    <div id="result">Result Here<button onclick="submitValue()">Submit</button></div>
   </div>
 </div>
-<button onclick="submitValue()">Submit</button>
 <script type="text/javascript">
 function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
