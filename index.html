@@ -26,6 +26,15 @@
   </div>
 </div>
 <script type="text/javascript">
+function submitValue() {
+  // Get the value entered by the user
+  var input = document.getElementById('value-input');
+  var value = input.value;
+  // Store the value in localStorage
+  localStorage.setItem('myValue', value);   
+  // Redirect to the second page
+  window.location.href = 'page2.html';
+}
 function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
 }
